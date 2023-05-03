@@ -1,5 +1,5 @@
 import shelve
-
+from
 
 d = shelve.open('score.txt')  # here you will save the score variable
 d['score'] = 10            # thats all, now it is saved on disk.
