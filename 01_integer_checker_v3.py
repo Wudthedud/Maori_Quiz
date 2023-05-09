@@ -1,8 +1,8 @@
-def int_check(number, min, max):
+def int_check(question, minimum, maximum):
     while True:
-        number = input(f"Please enter a number between {min} and {max} \n")
+        number = input(question)
         num = int(number)
-        if min <= number <= max:
+        if minimum <= number <= maximum:
             return num
         else:
             print(f"The number is not between {min} and {max}. Please try again.")
