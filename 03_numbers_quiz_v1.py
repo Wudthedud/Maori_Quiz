@@ -1,7 +1,7 @@
 from random import randint
 from FINAL_integer_checker_v4 import int_check
 
-numbers = ["tahi", "rua", "toru", "whā", "rima", "ono", "whitu", "waru", "iwa", "tekau"]
+numbers = ["tahi", "rua", "toru", "whā", "rima"]
 
 
 def numbers_quiz_easy():
