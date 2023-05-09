@@ -9,4 +9,4 @@ def int_check(question, minimum, maximum):
             else:
                 print(f"The number is not between {minimum} and {maximum}. Please try again. \n")
         except ValueError:
-            print(f"Invalid input. Please enter a whole number between {minimum} and {maximum}. \n")
+            print(f"Invalid input. Please enter a whole number between {minimum} and {maximum}.")
