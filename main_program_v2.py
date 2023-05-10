@@ -15,6 +15,8 @@ while lives > 0:
             result = numbers_quiz_medium()
         else:
             result = numbers_quiz_hard()
+    elif gamemode[0] == 2:
+        result =
 
     if result is True:
         score += 1
@@ -23,3 +25,4 @@ while lives > 0:
 
     print(f"Your score is: {score} points \n"
           f"You have {lives} lives left \n")
+

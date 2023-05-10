@@ -5,7 +5,7 @@ months = ["Kohi-tātea", "Hui-tanguru", "Poutū-te-rangi", "Paenga-whāwhā", "H
           "Here-turi-kōkā", "Mahuru", "Whiringa-ā-nuku", "Whiringa-ā-rangi", "Hakihea"]
 
 
-def numbers_quiz_easy():
+def months_quiz_easy():
     random_number = randint(1, 5)
     print(random_number)
     question = f"Which month is {months[random_number - 1]}? (1-6) \n"
@@ -19,7 +19,7 @@ def numbers_quiz_easy():
         return False
 
 
-def numbers_quiz_medium():
+def months_quiz_medium():
     random_number = randint(1, 12)
     print(random_number)
     question = f"Which month is {months[random_number - 1]}? (1-12) \n"
@@ -33,7 +33,7 @@ def numbers_quiz_medium():
         return False
 
 
-def numbers_quiz_hard():
+def months_quiz_hard():
     random_number = randint(1, 12)
     print(random_number)
     question = f"What is  \n"

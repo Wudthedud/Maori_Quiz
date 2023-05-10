@@ -22,3 +22,5 @@ dictionary_months = {1: "January",
                      11: "November",
                      12: "December"}
 
+
+print(dictionary_months[1])
