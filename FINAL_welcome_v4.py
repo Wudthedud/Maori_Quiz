@@ -38,8 +38,4 @@ def welcome():
     difficulty = int_check(question, 1, 3)
 
     game = [game_mode, difficulty]
-    print(game)
     return game
-
-
-welcome()

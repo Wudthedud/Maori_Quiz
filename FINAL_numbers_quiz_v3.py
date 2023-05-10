@@ -35,9 +35,9 @@ def numbers_quiz_medium():
 
 
 def numbers_quiz_hard():
-    random_number = randint(1, 30)
+    random_number = randint(1, 20)
     print(random_number)
-    question = f"Which number is {numbers[random_number - 1]}? (1-10) \n"
+    question = f"Which number is {numbers[random_number - 1]}? (1-20) \n"
     answer = int_check(question, 1, 20)
 
     if answer == random_number:

@@ -9,5 +9,11 @@ dictionary_numbers = {"one": 1,
                       "nine": 9,
                       "ten": 10}
 
-
+dictionary_months = {1: "January",
+                     2: "February",
+                     3: "March",
+                     4: "April",
+                     5: "May",
+                     6: "June",
+                     7: "July"
 print(dictionary_numbers["one"])
