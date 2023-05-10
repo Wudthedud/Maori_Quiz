@@ -1,3 +1,7 @@
+"""Daniel Wu - Maori Quiz
+Main Program - Version 1
+Welcome message and numbers quiz
+"""
 from FINAL_welcome_v4 import welcome
 from FINAL_numbers_quiz_v3 import *
 

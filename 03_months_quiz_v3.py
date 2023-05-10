@@ -35,10 +35,8 @@ def months_quiz_medium():
 
 def months_quiz_hard():
     random_number = randint(1, 12)
-    print(random_number)
-    question = f"What is  \n"
-    answer = int_check(question, 1, 12)
-
+    for i in range(4):
+        answer = input(f"Which month is {months[random_number] - 1}")
     if answer == random_number:
         print("Your answer was correct, you got 1 point!")
         return True

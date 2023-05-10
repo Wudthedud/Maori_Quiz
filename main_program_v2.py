@@ -1,3 +1,7 @@
+"""Daniel Wu - Maori Quiz
+Main Program - Version 2
+Months quiz, looping, and score/lives system
+"""
 from FINAL_welcome_v4 import welcome
 from FINAL_numbers_quiz_v3 import *
 
@@ -16,7 +20,8 @@ while lives > 0:
         else:
             result = numbers_quiz_hard()
     elif gamemode[0] == 2:
-        result =
+        if gamemode[1] == 1:
+            result =
 
     if result is True:
         score += 1
