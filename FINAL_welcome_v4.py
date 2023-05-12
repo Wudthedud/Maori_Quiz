@@ -1,10 +1,11 @@
 from FINAL_yes_no_checker_v4 import yes_no
 from FINAL_instructions_v2 import instructions
 from FINAL_integer_checker_v4 import int_check
+from FINAL_string_check_v4 import string_checker
 
 
 def welcome():
-    name = input("Welcome to the Maori Language Quiz, what is your name? \n").lower().title()
+    name = string_checker("Welcome to the Maori Language Quiz, what is your name?", 1, 10).lower().title()
     question = f"Hello {name}, how old are you? \n"
     age = int_check(question, 1, 100)
 
@@ -37,5 +38,5 @@ def welcome():
                 "3. \t Hard \n")
     difficulty = int_check(question, 1, 3)
 
-    game = [game_mode, difficulty]
+    game = [game_mode, difficulty, name]
     return game

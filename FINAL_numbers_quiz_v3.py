@@ -8,7 +8,6 @@ numbers = ["tahi", "rua", "toru", "whā", "rima", "ono", "whitu", "waru", "iwa",
 
 def numbers_quiz_easy():
     random_number = randint(1, 5)
-    print(random_number)
     question = f"Which number is {numbers[random_number - 1]}? (1-5) \n"
     answer = int_check(question, 1, 5)
 
@@ -22,7 +21,6 @@ def numbers_quiz_easy():
 
 def numbers_quiz_medium():
     random_number = randint(1, 10)
-    print(random_number)
     question = f"Which number is {numbers[random_number - 1]}? (1-10) \n"
     answer = int_check(question, 1, 10)
 
@@ -36,7 +34,6 @@ def numbers_quiz_medium():
 
 def numbers_quiz_hard():
     random_number = randint(1, 20)
-    print(random_number)
     question = f"Which number is {numbers[random_number - 1]}? (1-20) \n"
     answer = int_check(question, 1, 20)
 
