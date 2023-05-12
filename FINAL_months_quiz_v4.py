@@ -9,7 +9,6 @@ months = ["Hanuere", "Pēpuere", "Maehe", "Āperira", "Mei", "Hune", "Hūrae",
 
 def months_quiz_easy():
     random_number = randint(1, 6)
-    print(random_number)
     question = f"Which month is {months[random_number - 1]}? (1-6) \n"
     answer = int_check(question, 1, 6)
 
@@ -17,13 +16,12 @@ def months_quiz_easy():
         print("Your answer was correct, you got 1 point!")
         return True
     else:
-        print("Your answer was incorrect, you have lost 1 life.")
+        print(f"The answer was {random_number}, you have lost 1 life.")
         return False
 
 
 def months_quiz_medium():
     random_number = randint(1, 12)
-    print(random_number)
     question = f"Which month is {months[random_number - 1]}? (1-12) \n"
     answer = int_check(question, 1, 12)
 
@@ -31,7 +29,7 @@ def months_quiz_medium():
         print("Your answer was correct, you got 1 point!")
         return True
     else:
-        print("Your answer was incorrect, you have lost 1 life.")
+        print(f"The answer was {random_number}, you have lost 1 life.")
         return False
 
 
@@ -51,11 +49,18 @@ def months_quiz_hard():
         print(f"{letters[i]}: {choices[i]}")
 
     # Get the user's answer and check if it's correct
-    question = "Enter the letter of your answer:  (A/B/C/D)"
-    answer = string_checker(question, 1, 1).upper()
+    while True:
+        answer = string_checker("Enter the letter of your answer: (A/B/C/D)", 1, 1).upper().strip()
+        if answer in ["A", "B", "C", "D"]:
+            break
+        else:
+            print("Invalid input. Please enter A, B, C, or D.")
+
     if choices[letters.index(answer)] == months[random_number - 1]:
         print("Your answer was correct, you got 1 point!")
         return True
     else:
-        print("Your answer was incorrect, you have lost 1 life.")
+        print(f"The answer was {months[random_number - 1]}, you have lost 1 life.")
         return False
+
+

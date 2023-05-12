@@ -28,7 +28,7 @@ def welcome():
     question = ("Choose a quiz: \n"
                 "1. \t Maori Numbers Quiz \n"
                 "2. \t Days of the week in Maori Quiz \n"
-                "3. \t Months in Maori Quiz \n ")
+                "3. \t Months in Maori Quiz \n")
     game_mode = int_check(question, 1, 3)
 
     question = ("Choose a difficulty: \n"
