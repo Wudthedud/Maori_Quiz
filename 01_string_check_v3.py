@@ -1,8 +1,15 @@
-def string_checker(string):
-    if len(string) == 0:
-        return False
-    elif not string.isalpha():
-        return False
-    else:
-        return True
+def string_checker(question_, minimum, maximum):
+    loop = True
+    while loop:
+        string = input(f"{question_} \n").strip()
+        if not string.isalpha():
+            print("Please only input characters (A-Z)")
+        elif len(string) < minimum or len(string) > maximum:
+            print(f"Please enter text between {minimum} and {maximum} characters long")
+        else:
+            loop = False
+            return string
 
+
+question = "Input a string: "
+print(f"{string_checker(question, 1, 10)}")
