@@ -6,6 +6,7 @@ from FINAL_welcome_v4 import welcome
 from FINAL_numbers_quiz_v3 import *
 from FINAL_months_quiz_v4 import *
 import shelve
+from FINAL_highscore_update_v1 import *
 
 gamemode = welcome()
 lives = 3
@@ -42,5 +43,14 @@ while lives > 0:
 
     print(f"Your score is: {score} points \n"
           f"You have {lives} lives left \n")
+
+
+d = shelve.open('score.txt')
+numbers_highscore = d['highscores_numbers']
+months_highscore = d['highscore_months']
+days_highscore = d['highscore_days']
+d.close()
+
+if gamemode[0] == 1 and score > numbers_highscore[4[2]]:
 
 
