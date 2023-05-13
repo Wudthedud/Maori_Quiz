@@ -8,21 +8,27 @@ d.close()
 
 
 def scoreboard_numbers():
+    sorted_scores = sorted(numbers_highscore, key=lambda x: x[1], reverse=True)  # noqa
     print("High Scores")
     for i in range(5):
-        scores = numbers_highscore[i]
+        scores = sorted_scores[i]
         print(f"Name: {scores[0]}        Score: {scores[1]}")
 
 
 def scoreboard_days():
+    sorted_scores = sorted(days_highscore, key=lambda x: x[1], reverse=True)  # noqa
     print("High Scores")
     for i in range(5):
-        scores = days_highscore[i]
+        scores = sorted_scores[i]
         print(f"Name: {scores[0]}        Score: {scores[1]}")
 
 
 def scoreboard_months():
+    sorted_scores = sorted(months_highscore, key=lambda x: x[1], reverse=True)  # noqa
     print("High Scores")
     for i in range(5):
-        scores = months_highscore[i]
+        scores = sorted_scores[i]
         print(f"Name: {scores[0]}        Score: {scores[1]}")
+
+
+scoreboard_numbers()

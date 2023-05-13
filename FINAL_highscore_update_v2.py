@@ -1,5 +1,6 @@
 import shelve
 from FINAL_highscore_pull_v1 import *
+from FINAL_highscore_push_v3 import *
 
 d = shelve.open('score.txt')
 numbers_highscore = d['highscores_numbers']
@@ -13,31 +14,32 @@ months_scores = list(months_highscore)  # noqa
 
 
 def highscore_update(gamemode, name, score):
-    if gamemode == 1 and score > list(numbers_highscore[4])[1]:
+    print("You got a high score!")
+    if gamemode == 1 and score > list(number_scores[4])[1]:
         for i in range(5):
-            if score > list(numbers_highscore[i - 1])[1]:
-                list(numbers_highscore).insert(i - 1, [name, score])
-                del list(numbers_highscore[-1])
-                print("You got a high score!")
-                scoreboard_numbers()
+            if score > (number_scores[i - 1])[1]:
+                number_scores.insert(i - 1, [name, score])
+                del number_scores[-1]
+                break
 
     elif gamemode == 2 and score > list(days_scores[4])[1]:
+        print("You got a high score!")
         for i in range(5):
-            if score > days_scores[i - 1]:
+            if score > (days_scores[i - 1])[1]:
                 days_scores.insert(i - 1, [name, score])
                 del days_scores[-1]
-                print("You got a high score!")
-                scoreboard_days()
+                break
 
     elif gamemode == 3 and score > list(months_scores[4])[1]:
+        print("You got a high score!")
         for i in range(5):
-            if score > months_scores[i - 1]:
+            if score > months_scores[i - 1][1]:
                 months_scores.insert(i - 1, [name, score])
                 del months_scores[-1]
-                print("You got a high score!")
-                scoreboard_months()
+                break
 
-
-print(numbers_highscore)
-print(number_scores)
-print(list(number_scores[4])[1])
+    d = shelve.open('score.txt')
+    d['highscores_numbers'] = number_scores
+    d['highscores_months'] = days_scores
+    d['highscores_days'] = months_scores
+    d.close()

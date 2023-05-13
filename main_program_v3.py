@@ -46,3 +46,4 @@ while lives > 0:
 
 highscore_update(gamemode[0], gamemode[2], score)
 
+
