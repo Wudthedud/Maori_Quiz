@@ -9,7 +9,7 @@ d.close()
 
 def scoreboard_numbers():
     sorted_scores = sorted(numbers_highscore, key=lambda x: x[1], reverse=True)  # noqa
-    print("High Scores")
+    print("Top 5 High Scores")
     for i in range(5):
         scores = sorted_scores[i]
         print(f"Name: {scores[0]}        Score: {scores[1]}")
@@ -32,3 +32,5 @@ def scoreboard_months():
 
 
 scoreboard_numbers()
+scoreboard_days()
+scoreboard_months()
