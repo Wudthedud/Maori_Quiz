@@ -5,7 +5,6 @@ Months quiz, looping, and score/lives system
 from FINAL_welcome_v4 import welcome
 from FINAL_numbers_quiz_v3 import *
 from FINAL_months_quiz_v4 import *
-import shelve
 
 gamemode = welcome()
 lives = 3
@@ -42,5 +41,4 @@ while lives > 0:
 
     print(f"Your score is: {score} points \n"
           f"You have {lives} lives left \n")
-
 

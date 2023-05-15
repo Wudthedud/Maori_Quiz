@@ -62,5 +62,3 @@ def months_quiz_hard():
     else:
         print(f"The answer was {months[random_number - 1]}, you have lost 1 life.")
         return False
-
-

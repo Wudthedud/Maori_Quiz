@@ -9,4 +9,3 @@ def string_checker(question_, minimum, maximum):
         else:
             loop = False
             return string
-

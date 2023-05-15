@@ -1,11 +1,10 @@
 """Daniel Wu - Maori Quiz
-Main Program - Version 2
+Main Program - Version 3
 Months quiz, looping, and score/lives system
 """
 from FINAL_welcome_v4 import welcome
 from FINAL_numbers_quiz_v3 import *
 from FINAL_months_quiz_v4 import *
-import shelve
 from FINAL_highscore_update_v2 import *
 
 gamemode = welcome()
@@ -45,5 +44,3 @@ while lives > 0:
           f"You have {lives} lives left \n")
 
 highscore_update(gamemode[0], gamemode[2], score)
-
-

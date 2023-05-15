@@ -43,4 +43,3 @@ def highscore_update(gamemode, name, score):
     d['highscores_months'] = days_scores
     d['highscores_days'] = months_scores
     d.close()
-
