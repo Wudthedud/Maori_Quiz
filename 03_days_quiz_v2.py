@@ -17,3 +17,14 @@ def days_quiz_easy():
         return False
 
 
+def days_quiz_medium():
+    random_number = randint(1, 7)
+    print(random_number)
+    question = f"Which day is {days[random_number - 1]}? (1-7) \n"
+    answer = int_check(question, 1, 7)
+    if answer == random_number:
+        print("Your answer was correct, you got 1 point!")
+        return True
+    else:
+        print("Your answer was incorrect, you have lost 1 life.")
+        return False
