@@ -6,6 +6,7 @@ from FINAL_welcome_v4 import welcome
 from FINAL_numbers_quiz_v3 import *
 from FINAL_months_quiz_v4 import *
 
+highscore = 0
 gamemode = welcome()
 lives = 3
 score = 0
@@ -38,7 +39,9 @@ while lives > 0:
         score += 1
     elif result is False:
         lives -= 1
+    if score > highscore:
+        highscore = score
 
     print(f"Your score is: {score} points \n"
           f"You have {lives} lives left \n")
-
+    print(f"Highscore: {highscore}")

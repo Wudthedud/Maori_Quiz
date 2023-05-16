@@ -5,10 +5,10 @@ days = ["Rāhina", "Rātu", "Rāapa", "Rāpare", "Rāmere", "Rāhoroi", "Rātapu
 
 
 def days_quiz_easy():
-    random_number = randint(1, 7)
+    random_number = randint(1, 4)
     print(random_number)
-    question = f"Which day is {days[random_number - 1]}? (1-7) \n"
-    answer = int_check(question, 1, 7)
+    question = f"Which day is {days[random_number - 1]}? (1-4) \n"
+    answer = int_check(question, 1, 4)
     if answer == random_number:
         print("Your answer was correct, you got 1 point!")
         return True
@@ -28,3 +28,5 @@ def days_quiz_medium():
     else:
         print("Your answer was incorrect, you have lost 1 life.")
         return False
+
+

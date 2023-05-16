@@ -3,5 +3,5 @@
 'score_months', (1024, 5)
 'score_numbers', (1536, 5)
 'highscores_numbers', (2048, 119)
-'highscores_months', (2560, 111)
-'highscores_days', (3072, 121)
+'highscores_months', (2560, 107)
+'highscores_days', (3072, 115)

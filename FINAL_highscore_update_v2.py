@@ -13,6 +13,7 @@ days_scores = list(days_highscore)  # noqa
 months_scores = list(months_highscore)  # noqa
 
 
+# Updates the scoreboard
 def highscore_update(gamemode, name, score):
     print("You got a high score!")
     if gamemode == 1 and score > list(number_scores[4])[1]:
@@ -38,6 +39,7 @@ def highscore_update(gamemode, name, score):
                 del months_scores[-1]
                 break
 
+# Opens the score.txt file and updates the varaibes in it
     d = shelve.open('score.txt')
     d['highscores_numbers'] = number_scores
     d['highscores_months'] = days_scores
