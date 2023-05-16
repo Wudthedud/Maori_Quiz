@@ -18,7 +18,7 @@ def feedback():
         else:
             scoreboard_months()
     else:
-        question = "Would you like to continue?"
+        question = "Would you like to play again?"
         if yes_no(question):
             return True
         else:
