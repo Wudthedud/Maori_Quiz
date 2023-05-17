@@ -1,5 +1,5 @@
 def instructions():
-    print("\t Welcome to the Maori Quiz \n"
-          "You have 3 lives, each time you get a question wrong you lose 1 life, \n"
-          "each time you get a question right, you gain a point. \n \n "
-          "")
+    print("Kia ora and welcome to the Maori Quiz game! \n"
+          "For every question you answer correctly, you'll earn a fantastic point, "
+          "but be careful! A wrong answer will cost you a life. You have three lives to make it to "
+          "get as many points as you can. So, let's have fun and test your Maori knowledge!")
