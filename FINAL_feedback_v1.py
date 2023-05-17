@@ -9,7 +9,7 @@ def feedback():
         question = "Which scoreboard would you like to see? \n" \
                    "1. Numbers Quiz Scoreboard \n" \
                    "2. Days of Week Quiz Scoreboard \n" \
-                   "3. Months Quiz Scoreboard"
+                   "3. Months Quiz Scoreboard\n"
         scoreboard_selection = int_check(question, 1, 3)
         if scoreboard_selection == 1:
             scoreboard_numbers()
@@ -17,9 +17,9 @@ def feedback():
             scoreboard_days()
         else:
             scoreboard_months()
+
+    question = "Would you like to play again?"
+    if yes_no(question):
+        return False
     else:
-        question = "Would you like to play again?"
-        if yes_no(question):
-            return True
-        else:
-            return False
+        return True

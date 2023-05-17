@@ -1,6 +1,6 @@
 """Daniel Wu - Maori Quiz
-Main Program - Version 4
-Farewell messages, highscore and scoreboard integration,
+Main Program - Version 5 (Completed Version)
+Final Touches, aestetics and bug fixes
 """
 from FINAL_welcome_v4 import *
 from FINAL_numbers_quiz_v3 import *
@@ -23,34 +23,25 @@ while repeat:
     while lives > 0:
         if gamemode == 1:
             if difficulty == 1:
-                print("You have chosen: Numbers Quiz - Easy")
                 result = numbers_quiz_easy()
             elif difficulty == 2:
-                print("You have chosen: Numbers Quiz - Medium")
                 result = numbers_quiz_medium()
             else:
-                print("You have chosen: Numbers Quiz - Hard")
                 result = numbers_quiz_hard()
         elif gamemode == 2:
             if difficulty == 1:
-                print("You have chosen: Days Quiz - Easy")
                 result = days_quiz_easy()
             elif difficulty == 2:
-                print("You have chosen: Days Quiz - Medium")
                 result = days_quiz_medium()
             else:
-                print("You have chosen: Days Quiz - Hard")
                 result = days_quiz_hard()
         else:
             if difficulty == 1:
-                print("You have chosen: Months Quiz - Easy")
                 result = months_quiz_easy()
             elif difficulty == 2:
                 result = months_quiz_medium()
-                print("You have chosen: Months Quiz - Medium")
             else:
                 result = months_quiz_hard()
-                print("You have chosen: Months Quiz - Hard")
 
         if result is True:
             score += 1
@@ -60,7 +51,7 @@ while repeat:
         print(f"Your score is: {score} points \n"
               f"You have {lives} lives left \n")
 
-    highscore_update(gamemode[0], gamemode[2], score)
+    highscore_update(gamemode, name, score)
     print(f"You finsished with {score} points")
 
     if feedback():

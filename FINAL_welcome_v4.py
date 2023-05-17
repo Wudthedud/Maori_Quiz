@@ -3,6 +3,9 @@ from FINAL_instructions_v2 import instructions
 from FINAL_integer_checker_v4 import int_check
 from FINAL_string_check_v4 import string_checker
 
+GAME_MODES = ["Numbers Quiz", "Days of the Week Quiz", "Months Quiz"]
+DIFFICULTIES = ["Easy", "Medium", "Hard"]
+
 
 def welcome():
     name = string_checker("Welcome to the Maori Language Quiz, what is your name?", 1, 10).lower().title()
@@ -39,5 +42,6 @@ def welcome():
                 "3. \t Hard \n")
     difficulty = int_check(question, 1, 3)
 
+    print(f"You are playing {GAME_MODES[game_mode - 1]} - {DIFFICULTIES[difficulty - 1]}")
     game = [game_mode, difficulty, name]
     return game

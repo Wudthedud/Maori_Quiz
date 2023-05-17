@@ -39,8 +39,8 @@ def highscore_update(gamemode, name, score):
                 break
 
 # Opens the score.txt file and updates the varaibes in it
-    d = shelve.open('score.txt')
+    d = shelve.open('score.txt') # noqa
     d['highscores_numbers'] = number_scores
-    d['highscores_months'] = days_scores
-    d['highscores_days'] = months_scores
+    d['highscores_days'] = days_scores
+    d['highscores_months'] = months_scores
     d.close()
