@@ -1,5 +1,4 @@
 import shelve
-from FINAL_highscore_pull_v1 import *
 from FINAL_highscore_push_v3 import *
 
 d = shelve.open('score.txt')

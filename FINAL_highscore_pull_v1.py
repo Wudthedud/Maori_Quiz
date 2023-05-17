@@ -1,7 +1,6 @@
 """Daniel Wu - Highscore Pull (Gets highscores and displays them)
 """
 import shelve
-from string_formatter import *
 
 # Pulls highscores from the score.txt file and makes them into varaibles using shelve
 d = shelve.open('score.txt')
@@ -36,6 +35,3 @@ def scoreboard_days():
     for i in range(5):
         scores = sorted_scores[i]
         print(f"{scores[0]} --- {scores[1]} points".center(50, " "))
-
-
-scoreboard_days()
