@@ -1,5 +1,4 @@
 from FINAL_yes_no_checker_v4 import yes_no
-from FINAL_integer_checker_v4 import int_check
 from FINAL_highscore_pull_v2 import *
 
 
