@@ -6,9 +6,9 @@ days_highscore = d['highscores_days']
 months_highscore = d['highscores_months']
 d.close()
 
-number_scores = list(numbers_highscore)  # noqa
-days_scores = list(days_highscore)  # noqa
-months_scores = list(months_highscore)  # noqa
+number_scores = list(numbers_highscore)
+days_scores = list(days_highscore)
+months_scores = list(months_highscore)
 
 
 def highscore_update(gamemode, name, score):

@@ -29,6 +29,7 @@ def welcome():
         question = "Do you wish to continue?"
         if not yes_no(question):
             print("Thanks for trying out this quiz, see you later!")
+            exit()
 
     question = ("Choose a quiz: \n"
                 "1. \t Maori Numbers Quiz \n"
@@ -36,12 +37,13 @@ def welcome():
                 "3. \t Months in Maori Quiz \n")
     game_mode = int_check(question, 1, 3)
 
-    question = ("Choose a difficulty: \n"
+    question = ("\nChoose a difficulty: \n"
                 "1. \t Easy \n"
                 "2. \t Medium \n"
                 "3. \t Hard \n")
     difficulty = int_check(question, 1, 3)
 
+    print("\n" * 60)
     print(f"You are playing {GAME_MODES[game_mode - 1]} - {DIFFICULTIES[difficulty - 1]}")
     game = [game_mode, difficulty, name]
     return game

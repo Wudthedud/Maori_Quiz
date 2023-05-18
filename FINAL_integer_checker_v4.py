@@ -1,4 +1,3 @@
-
 def int_check(question, minimum, maximum):
     while True:
         number = input(question)

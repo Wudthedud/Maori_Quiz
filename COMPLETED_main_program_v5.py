@@ -9,18 +9,23 @@ from FINAL_highscore_update_v2 import *
 from FINAL_days_quiz_v3 import *
 from FINAL_feedback_v1 import *
 
+# Variables
 selections = welcome()
 gamemode = selections[0]
 difficulty = selections[1]
 name = selections[2]
 repeat = True
 
+# Looping the code while the user still has more than 1 life
 while repeat:
     lives = 3
     score = 0
     result = None
 
+    # Prompting the user the questions
     while lives > 0:
+        print("\033[4m" + "\033[94m" + f"{score} point(s)                     {lives} live(s)" + "\033[0m")
+
         if gamemode == 1:
             if difficulty == 1:
                 result = numbers_quiz_easy()
@@ -48,9 +53,7 @@ while repeat:
         elif result is False:
             lives -= 1
 
-        print(f"Your score is: {score} points \n"
-              f"You have {lives} lives left \n")
-
+    # Updates the highscore using a function  and telling user how many points the got
     highscore_update(gamemode, name, score)
     print(f"You finsished with {score} points")
 

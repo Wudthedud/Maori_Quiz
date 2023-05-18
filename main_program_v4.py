@@ -3,7 +3,7 @@ Main Program - Version 4
 Farewell messages, highscore and scoreboard integration,
 """
 from FINAL_welcome_v4 import *
-from FINAL_numbers_quiz_v3 import *
+from numbers_quiz_v2 import *
 from FINAL_months_quiz_v4 import *
 from FINAL_highscore_update_v2 import *
 from FINAL_days_quiz_v3 import *
@@ -25,7 +25,6 @@ while repeat:
         if gamemode == 1:
             if difficulty == 1:
                 result = numbers_quiz_easy()
-                print("You have chosen: Numbers Quiz - Easy")
             elif difficulty == 2:
                 result = numbers_quiz_medium()
                 print("You have chosen: Numbers Quiz - Medium")
