@@ -8,6 +8,6 @@ def feedback():
         scoreboard()
     question = "Would you like to play again?"
     if yes_no(question):
-        return True
-    else:
         return False
+    else:
+        return True

@@ -16,5 +16,3 @@ def update_scores(gamemode, name, score):
         d['highscores_months'] = [name, score]
     d.close()
 
-
-update_scores(1, 'Daniel', 11)

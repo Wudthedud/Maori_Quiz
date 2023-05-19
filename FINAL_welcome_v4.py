@@ -15,7 +15,7 @@ def welcome():
     if age > 12:
         question = "You are too old for this game, would you like to continue?"
         if not yes_no(question):
-            print("Farewell message")
+            print("Thanks for trying out this quiz, see you later!")
             exit()
     elif age < 5:
         question = "You are too young for this game, would you like to continue?"

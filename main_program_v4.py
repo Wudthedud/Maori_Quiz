@@ -9,6 +9,7 @@ from FINAL_highscore_update_v2 import *
 from FINAL_days_quiz_v3 import *
 from FINAL_yes_no_checker_v4 import *
 from FINAL_feedback_v1 import *
+from FINAL_highscore_push_v3 import *
 
 selections = welcome()
 gamemode = selections[0]
@@ -60,7 +61,7 @@ while repeat:
         print(f"Your score is: {score} points \n"
               f"You have {lives} lives left \n")
 
-    highscore_update(gamemode[0], gamemode[2], score)
+    update_scores(gamemode, name, score)
     print(f"You finsished with {score} points")
 
     if feedback():

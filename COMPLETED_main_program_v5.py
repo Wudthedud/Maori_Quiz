@@ -54,7 +54,7 @@ while repeat:
             lives -= 1
 
     # Updates the highscore using a function  and telling user how many points the got
-    highscore_update(gamemode, name, score)
+    update_scores(gamemode, name, score)
     print(f"You finsished with {score} points")
 
     if feedback():
