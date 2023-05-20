@@ -29,14 +29,14 @@ def numbers_quiz_medium():
     answer = int_check(question, 1, 10)
 
     if answer == random_number:
-        print("=" * 32)
+        print("=" * 64)
         print("\n" * 9)
         print("\033[92m" + "Your answer was correct, you got 1 point!\n" + "\033[0m")
         return True
     else:
+        print("=" * 64)
         print("\n" * 9)
         print("\033[91m" + "Your answer was incorrect, you have lost 1 life.\n" + "\033[0m")
-        print("=" * 32)
         return False
 
 
@@ -46,8 +46,12 @@ def numbers_quiz_hard():
     answer = int_check(question, 1, 20)
 
     if answer == random_number:
+        print("=" * 64)
+        print("\n" * 9)
         print("\033[92m" + "Your answer was correct, you got 1 point!" + "\033[0m")
         return True
     else:
+        print("=" * 64)
+        print("\n" * 9)
         print("\033[91m" + "Your answer was incorrect, you have lost 1 life." + "\033[0m")
         return False

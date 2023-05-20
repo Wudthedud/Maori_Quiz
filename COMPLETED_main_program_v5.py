@@ -55,7 +55,7 @@ while repeat:
 
     # Updates the highscore using a function  and telling user how many points the got
     update_scores(gamemode, name, score)
-    print(f"You finsished with {score} points")
+    print(f"You finished with {score} points")
 
     if feedback():
         print("Thanks for playing the Maori Quiz, hope you had fun and learned something. See you later!")

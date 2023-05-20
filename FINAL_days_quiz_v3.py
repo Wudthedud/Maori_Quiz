@@ -2,6 +2,7 @@ from random import randint
 from FINAL_integer_checker_v4 import int_check
 from random import shuffle
 from FINAL_string_check_v4 import string_checker
+from dictionary import dictionary_days
 
 days = ["Rāhina", "Rātu", "Rāapa", "Rāpare", "Rāmere", "Rāhoroi", "Rātapu"]
 
@@ -11,10 +12,14 @@ def days_quiz_easy():
     question = f"Which day is {days[random_number - 1]}? (1-4) \n"
     answer = int_check(question, 1, 4)
     if answer == random_number:
-        print("Your answer was correct, you got 1 point!")
+        print("=" * 64)
+        print("\n" * 8)
+        print("\033[92m" + "Your answer was correct, you got 1 point!\n" + "\033[0m")
         return True
     else:
-        print("Your answer was incorrect, you have lost 1 life.")
+        print("=" * 64)
+        print("\n" * 8)
+        print("\033[91m" + "Your answer was incorrect, you have lost 1 life.\n" + "\033[0m")
         return False
 
 
@@ -23,16 +28,20 @@ def days_quiz_medium():
     question = f"Which day is {days[random_number - 1]}? (1-7) \n"
     answer = int_check(question, 1, 7)
     if answer == random_number:
-        print("Your answer was correct, you got 1 point!")
+        print("=" * 64)
+        print("\n" * 8)
+        print("\033[92m" + "Your answer was correct, you got 1 point!\n" + "\033[0m")
         return True
     else:
-        print("Your answer was incorrect, you have lost 1 life.")
+        print("=" * 64)
+        print("\n" * 8)
+        print("\033[91m" + "Your answer was incorrect, you have lost 1 life.\n" + "\033[0m")
         return False
 
 
 def days_quiz_hard():
     random_number = randint(1, 7)
-    print(f"What is the name of day {random_number} in Maori?")
+    print(f"What is the name of {dictionary_days[random_number]} in Maori?")
     choices = [days[random_number - 1]]
     while len(choices) < 4:
         choice = days[randint(0, 6)]
@@ -52,8 +61,12 @@ def days_quiz_hard():
             print("Invalid input. Please enter A, B, C, or D.")
 
     if choices[letters.index(answer)] == days[random_number - 1]:
-        print("Your answer was correct, you got 1 point!")
+        print("=" * 64)
+        print("\n" * 8)
+        print("\033[92m" + "Your answer was correct, you got 1 point!\n" + "\033[0m")
         return True
     else:
-        print(f"The answer was {days[random_number - 1]}, you have lost 1 life.")
+        print("=" * 64)
+        print("\n" * 8)
+        print("\033[91m" + "Your answer was incorrect, you have lost 1 life.\n" + "\033[0m")
         return False

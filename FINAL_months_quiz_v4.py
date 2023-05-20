@@ -13,10 +13,14 @@ def months_quiz_easy():
     answer = int_check(question, 1, 6)
 
     if answer == random_number:
-        print("Your answer was correct, you got 1 point!")
+        print("=" * 64)
+        print("\n" * 8)
+        print("\033[92m" + "Your answer was correct, you got 1 point!\n" + "\033[0m")
         return True
     else:
-        print(f"The answer was {random_number}, you have lost 1 life.")
+        print("=" * 64)
+        print("\n" * 8)
+        print("\033[91m" + "Your answer was incorrect, you have lost 1 life.\n" + "\033[0m")
         return False
 
 
@@ -26,10 +30,14 @@ def months_quiz_medium():
     answer = int_check(question, 1, 12)
 
     if answer == random_number:
-        print("Your answer was correct, you got 1 point!")
+        print("=" * 64)
+        print("\n" * 8)
+        print("\033[92m" + "Your answer was correct, you got 1 point!\n" + "\033[0m")
         return True
     else:
-        print(f"The answer was {random_number}, you have lost 1 life.")
+        print("=" * 64)
+        print("\n" * 8)
+        print("\033[91m" + "Your answer was incorrect, you have lost 1 life.\n" + "\033[0m")
         return False
 
 
@@ -57,8 +65,12 @@ def months_quiz_hard():
             print("Invalid input. Please enter A, B, C, or D.")
 
     if choices[letters.index(answer)] == months[random_number - 1]:
-        print("Your answer was correct, you got 1 point!")
+        print("=" * 64)
+        print("\n" * 8)
+        print("\033[92m" + "Your answer was correct, you got 1 point!\n" + "\033[0m")
         return True
     else:
-        print(f"The answer was {months[random_number - 1]}, you have lost 1 life.")
+        print("=" * 64)
+        print("\n" * 8)
+        print("\033[91m" + "Your answer was incorrect, you have lost 1 life.\n" + "\033[0m")
         return False
