@@ -1,13 +1,20 @@
+""" Main Component - Welcome Message
+Final Version
+"""
+
 from FINAL_yes_no_checker_v4 import yes_no
 from FINAL_instructions_v2 import instructions
 from FINAL_integer_checker_v4 import int_check
 from FINAL_string_check_v4 import string_checker
 
+# List of game modes and difficulties
 GAME_MODES = ["Numbers Quiz", "Days of the Week Quiz", "Months Quiz"]
 DIFFICULTIES = ["Easy", "Medium", "Hard"]
 
 
 def welcome():
+
+    # Asks for name and age, if age too high or low, gives warning
     name = string_checker("Welcome to the Maori Language Quiz, what is your name?", 1, 10).lower().title()
     question = f"Hello {name}, how old are you? \n"
     age = int_check(question, 1, 100)
@@ -22,8 +29,9 @@ def welcome():
         if not yes_no(question):
             print("Thanks for trying out this quiz, see you later!")
             exit()
-    question = "Have you played this game before?"
 
+    # Asks if they want to see the instructions
+    question = "Have you played this game before?"
     if not yes_no(question):
         instructions()
         question = "Do you wish to continue?"
@@ -31,6 +39,7 @@ def welcome():
             print("Thanks for trying out this quiz, see you later!")
             exit()
 
+    # Quiz and difficulty selection
     question = ("Choose a quiz: \n"
                 "1. \t Maori Numbers Quiz \n"
                 "2. \t Days of the week in Maori Quiz \n"

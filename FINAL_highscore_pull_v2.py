@@ -1,6 +1,7 @@
 import shelve
 
 
+# Prints the scoreboard with some formatting so that it looks bettwe
 def scoreboard():
     d = shelve.open('score.txt')
     numbers_highscore = d['highscores_numbers']

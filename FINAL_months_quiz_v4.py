@@ -3,10 +3,12 @@ from FINAL_integer_checker_v4 import int_check
 from FINAL_string_check_v4 import string_checker
 from dictionary import dictionary_months
 
+# List of months
 months = ["Hanuere", "Pēpuere", "Maehe", "Āperira", "Mei", "Hune", "Hūrae",
           "Ākuhata", "Hepetema", "Ōketopa", "Noema", "Tīhema"]
 
 
+# Easy quiz
 def months_quiz_easy():
     random_number = randint(1, 6)
     question = f"Which month is {months[random_number - 1]}? (1-6) \n"
@@ -24,6 +26,7 @@ def months_quiz_easy():
         return False
 
 
+# Medium Quiz
 def months_quiz_medium():
     random_number = randint(1, 12)
     question = f"Which month is {months[random_number - 1]}? (1-12) \n"
@@ -41,6 +44,7 @@ def months_quiz_medium():
         return False
 
 
+# Hard Quiz
 def months_quiz_hard():
     random_number = randint(1, 12)
     print(f"What is the name of {dictionary_months[random_number]} in Maori?")
@@ -64,6 +68,7 @@ def months_quiz_hard():
         else:
             print("Invalid input. Please enter A, B, C, or D.")
 
+# Prints the user feedback with formatting
     if choices[letters.index(answer)] == months[random_number - 1]:
         print("=" * 64)
         print("\n" * 8)

@@ -1,3 +1,4 @@
+# Checks if a string is only alphabet characters and between a certain length
 def string_checker(question_, minimum, maximum):
     while True:
         string = input(f"{question_} \n").strip()

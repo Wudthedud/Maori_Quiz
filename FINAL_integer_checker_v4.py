@@ -1,3 +1,4 @@
+# Final version of the integer checker, checks if number, min, max, and not float
 def int_check(question, minimum, maximum):
     while True:
         number = input(question)

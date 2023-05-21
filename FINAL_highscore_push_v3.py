@@ -1,6 +1,7 @@
 import shelve
 
 
+# Updates the scores of the corresponding game mode
 def update_scores(gamemode, name, score):
     d = shelve.open('score.txt')
     numbers_highscore = d['highscores_numbers']

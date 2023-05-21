@@ -5,7 +5,7 @@ Final Touches, aestetics and bug fixes
 from FINAL_welcome_v4 import *
 from FINAL_numbers_quiz_v3 import *
 from FINAL_months_quiz_v4 import *
-from FINAL_highscore_update_v2 import *
+from highscore_update_v2 import *
 from FINAL_days_quiz_v3 import *
 from FINAL_feedback_v1 import *
 
@@ -57,6 +57,7 @@ while repeat:
     update_scores(gamemode, name, score)
     print(f"You finished with {score} points")
 
+# Checks if they want to see scoreboard and if they want to play again, repeats or exits program accordingly
     if feedback():
         print("Thanks for playing the Maori Quiz, hope you had fun and learned something. See you later!")
         repeat = False

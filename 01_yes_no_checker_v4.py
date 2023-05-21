@@ -10,5 +10,3 @@ def yes_no(question):
         else:
             print("Invalid input. Please enter 'yes' or 'no'")
 
-
-yes_no("Test")

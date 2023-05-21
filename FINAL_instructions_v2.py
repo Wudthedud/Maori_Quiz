@@ -1,3 +1,4 @@
+# Instructions for the game
 def instructions():
     print("Kia ora and welcome to the Maori Quiz game! \n"
           "For every question you answer correctly, you'll earn a point, but be careful! "

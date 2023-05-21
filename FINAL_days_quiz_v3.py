@@ -4,9 +4,11 @@ from random import shuffle
 from FINAL_string_check_v4 import string_checker
 from dictionary import dictionary_days
 
+# List of days
 days = ["Rāhina", "Rātu", "Rāapa", "Rāpare", "Rāmere", "Rāhoroi", "Rātapu"]
 
 
+# Code for the easy quiz
 def days_quiz_easy():
     random_number = randint(1, 4)
     question = f"Which day is {days[random_number - 1]}? (1-4) \n"
@@ -23,6 +25,7 @@ def days_quiz_easy():
         return False
 
 
+# Code for the medium quiz
 def days_quiz_medium():
     random_number = randint(1, 7)
     question = f"Which day is {days[random_number - 1]}? (1-7) \n"
@@ -39,6 +42,7 @@ def days_quiz_medium():
         return False
 
 
+# Code for the hard quiz
 def days_quiz_hard():
     random_number = randint(1, 7)
     print(f"What is the name of {dictionary_days[random_number]} in Maori?")
@@ -60,6 +64,7 @@ def days_quiz_hard():
         else:
             print("Invalid input. Please enter A, B, C, or D.")
 
+# Gives user feedback
     if choices[letters.index(answer)] == days[random_number - 1]:
         print("=" * 64)
         print("\n" * 8)
